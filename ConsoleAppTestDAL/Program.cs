@@ -21,11 +21,11 @@ static async Task CreateAsync()
     //Add Customer
     Customer customer = new Customer()
     {
-        FirstName = "Camila",
-        LastName = "Guerra",
+        FirstName = "Ludwig",
+        LastName = "Cardona",
         City = "Bogotá",
         Country = "Colombia",
-        Phone = "3215121750"
+        Phone = "3165058848"
     };
 
     using (var repository = RepositoryFactory.CreateRepository())
@@ -48,7 +48,7 @@ static async Task RetrieveAsync()
     {
         try
         {
-            Expression<Func<Customer, bool>> criteria = c => c.FirstName == "Camila" && c.LastName == "Guerra";
+            Expression<Func<Customer, bool>> criteria = c => c.FirstName == "Ludwig" && c.LastName == "Cardona";
             var customer = await repository.RetrieveAsync(criteria);
             if (customer != null)
             {
